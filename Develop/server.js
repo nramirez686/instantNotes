@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const notesData = require("./db/db.json");
 console.log(notesData);
 
