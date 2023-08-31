@@ -24,7 +24,7 @@ You can use the project by opening the app, giving your notes a title, then begi
 
 ## Credits
 
-Yes, github starter code.
+Github starter code was provided in the repository: https://github.com/coding-boot-camp/miniature-eureka.git
 
 ## License
 
@@ -40,3 +40,6 @@ For questions about this project, please contact:
 - GitHub: [@nramirez686](https://github.com/nramirez686)
 - Deployed Application Link: https://morning-lowlands-51725-90c866be19e2.herokuapp.com/
 - GitHub Repository: https://github.com/nramirez686/instantNotes.git
+
+![deployed website image](public/assets/images/Screenshot%202023-08-30%20at%207.46.10%20PM.png)
+![deployed website with note added](public/assets/images/Screenshot%202023-08-30%20at%207.48.31%20PM.png)
