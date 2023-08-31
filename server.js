@@ -21,7 +21,7 @@ app.get("/notes", (req, res) =>
 
 app.get("/api/notes", (req, res) => {
   const notesData = fs.readFileSync("./db/db.json", "utf8");
-  const notes = JSON.parse(notesData);
+  let notes = JSON.parse(notesData);
   res.json(notes);
 });
 
@@ -45,7 +45,7 @@ app.post("/api/notes", (req, res) => {
   //send new note as a response
   res.json(newNote);
 });
-
+//init the app
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
@@ -53,11 +53,11 @@ app.listen(PORT, () => {
 app.delete("/api/notes/:id", (req, res) => {
   const notesData = fs.readFileSync("./db/db.json", "utf8");
   let notes = JSON.parse(notesData);
-
+  //added noteID from request params
   const noteId = req.params.id;
-
+  //find the index based on ID
   const noteIndex = notes.findIndex((note) => note.id === noteId);
-
+  // if statement indecating that note will be removed by its id
   if (noteIndex !== -1) {
     notes.splice(noteIndex, 1);
     fs.writeFileSync("db/db.json", JSON.stringify(notes));
